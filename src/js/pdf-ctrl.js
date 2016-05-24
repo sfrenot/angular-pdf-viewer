@@ -7,6 +7,7 @@ angular.module('pdf')
     '$log',
     '$q',
   function($scope, $element, $attrs, pdfDelegate, $log, $q) {
+    console.log('->', $scope.$eval($attrs.delegateHandle));
 
     // Register the instance!
     var deregisterInstance = pdfDelegate._registerInstance(this, $scope.$eval($attrs.delegateHandle));
